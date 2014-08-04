@@ -20,17 +20,26 @@
 
         <!-- your app's js -->
         <script src="js/app.js"></script>
+        <script src="js/directives.js"></script>
+        <script src="js/controllers.js"></script>
     </head>
-    <body ng-app="starter">
+    <body ng-app="KLSMusic">
 
         <ion-pane>
             <ion-header-bar class="bar-stable">
                 <h1 class="title">Ionic Blank Starter</h1>
             </ion-header-bar>
             <ion-content ng-controller="mainCtrl">
-                <button class="button button-positive" ng-click="showAlert()">
-                    Alert
+                <button class="button button-positive" ng-click="updateFiles()">
+                    Actualiza
                 </button>
+                <ul class="list">
+
+                    <li class="item" ng-repeat="file in files">
+                    {{file}}
+                    </li>
+
+                </ul>
             </ion-content>
         </ion-pane>
     </body>
