@@ -70,12 +70,13 @@ angular.module('KLSMusic', ['ionic', 'KLS.directives'])
                     }
                     
                 }
+                console.log( JSON.stringify( $scope.files ) );
             },
             function(error){
                 console.log("fallo D:");
             }
         );
-    }
+    };
 
     $scope.isExeptionDir = function(directory){
 
@@ -87,5 +88,10 @@ angular.module('KLSMusic', ['ionic', 'KLS.directives'])
             };
         };
         return false;
-    }
+    };
+
+    $scope.getItemHeight = function(item, index) {
+        //Make evenly indexed items be 10px taller, for the sake of example
+        return (index % 2) === 0 ? 50 : 60;
+    };
 })
